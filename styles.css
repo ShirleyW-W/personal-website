@@ -1,0 +1,325 @@
+body{
+    background-color: #fbe3c0;
+    background-image: url("images/main_bg.png");
+    background-size: 100%;
+    background-position: center top;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+header {
+    background-image: url("images/header_bg2.jpg");
+    position: relative; /* Allows for absolute positioning of child elements */
+    background-size: 100%;
+    background-position: center;
+    padding: 10px;
+    margin: 30px 50px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+/* Overlay with 30% opacity */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 1;
+}
+/* Make sure header content appears above the overlay */
+header * {
+    position: relative;
+    z-index: 2;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 20px;
+}
+
+/* Section */
+section {
+    padding: 20px;
+    margin: 30px 50px;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+section div {
+    padding: 20px;
+    margin: 10px;;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+
+section div p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333;
+    text-align: left;
+    margin:0;
+}
+
+/* about me box */
+.about-me-box {
+    background-color: rgb(235, 229, 229, 0.5); /* Background color */
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px; /* Space above the box */
+    text-align: left; /* Align text to the left */
+    max-width: 800px; /* Limit width */
+    margin-left: auto;
+    margin-right: auto; /* Center box */
+}
+
+.about-me-box h2 {
+    text-align: left; /* Align title to match paragraph */
+    color: #85120f;
+    margin-bottom: 10px;
+}
+
+.about-me-box p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    text-align: left;
+    margin: 10px 0; /* Adjust spacing */
+}
+
+/* me */
+section.me {
+    display: block; /* override flex-row if needed */
+    padding: 20px;
+    margin: 30px auto;
+    text-align: center;
+    border-radius: 20px;
+    max-width: 100%;
+}
+
+
+.me {
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    flex-direction:row;
+}
+
+.me div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+
+.me figure {
+    text-align: center;
+    margin: auto;
+}
+
+.me figure img {
+    object-fit: cover;
+    height: 300px;
+    border: 3px solid #ddd; /* Optional: Adds a subtle border */
+    transition: transform 0.3s ease-in-out; /* Hover effect */
+    display: inline-block;
+}
+
+.me figure img:hover {
+    transform: scale(1.1);
+}
+
+.me figcaption {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Features */
+.features {
+    padding: 20px;
+    margin: 30px 50px;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.features figure {
+    margin: 0; /* Remove any margin */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.features figure img {
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    height: 410px;
+}
+
+
+/* experience */
+.experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 50px;
+    text-align: center;
+    background-color: rgb(235, 229, 229, 0.4);
+}
+
+.experience figure {
+    display: flex;
+    flex-direction: column; /* Stack image and caption vertically */
+    align-items: center;
+    margin: 0;
+}
+
+.experience figure img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 250px;
+}
+
+.experience figcaption {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* button */
+button {
+    background-color: gray;
+    border: none;
+    color: white;
+    border-radius: 12px;
+}
+button:hover {
+    background-color: #fbe3c0;
+    color: black;
+}
+
+/* github button */
+.github-img-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.github-img-button:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* footer */
+footer {
+    background: rgba(250, 241, 169, 0.7);
+    margin: 30px 50px;
+    text-align: center;
+    border-radius: 20px;
+}
+.footer-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* spacing between items */
+    flex-wrap: wrap; /* responsive on small screens */
+}
+.footer-row .email {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+a {
+    text-decoration: none; /* removes underline from button link */
+}
+
+li:hover {
+    background-color: #faf1a9;
+    border-radius: 5px;
+}
+
+h1 {
+    color: #003153;
+    text-align: center;
+}
+
+h2 {
+    color: #85120f;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    section,
+    .features,
+    .experience {
+        flex-direction: column;
+        margin: 20px 10px;
+    }
+    
+    nav li {
+        display: inline-block;
+        margin: 10px;
+        font-size: 14px; /* Slightly smaller text for mobile */
+    }
+
+    header {
+        margin: 20px 10px;
+        padding: 10px;
+    }
+
+    footer {
+        margin: 20px 10px;
+    }
+
+    .me div {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .me figure img {
+        height: 200px;
+    }
+
+    .features figure img,
+    .experience figure img {
+        height: 250px;
+    }
+
+    .footer-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
